@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "Cargado";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Cargado</h2>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cargado</title>
+</head>
+<body>
+    <h3>Lista de Productos</h3>
+    <table cellpadding="2" cellspacing="2" border="1">
+        <tr>
+            <th>ID</th>
+            <th>APELLIDOS</th>
+            <th>NOMBRES</th>
+            <th>DOCUMENTO</th>
+            <th>F. NAC</th>
+            <th>TELEFONO</th>
+            <th>SEXO</th>
+            <th>E. CIVIL</th>
+            <th>G. INSTRU</th>
+            <th>G. SANG</th>
+            <th>F. SANG</th>
+            <th>DISTRITO</th>
+            <th>PROVINCIA</th>
+            <th>DEPARTAMENTO</th>
+            <th>HIJOS</th>
+            <th>F. INSER</th>
+            <th>USUARIO</th>
+            <th>F. ACT</th>
+            <th>USUARIO ACT</th>
+            <th>ELIMINADO</th>
+        </tr>
+        @foreach (var pr in ViewBag.ListProducts)
+        {
+            <tr>
+                <td>@pr.v_PersonaId</td>
+                <td>@pr.v_Apellidos</td>
+                <td>@pr.v_Nombres</td>
+                <td>@pr.v_DocNumero</td>
+                <td>@pr.d_FechNac</td>
+                <td>@pr.v_NumeroTelefono</td>
+                <td>@pr.i_TipoSexo</td>
+                <td>@pr.i_EstadoCivil</td>
+                <td>@pr.i_GradoInstruccion</td>
+                <td>@pr.i_GrupoSanguineo</td>
+                <td>@pr.i_FactorSanguineo</td>
+                <td>@pr.i_Distrito</td>
+                <td>@pr.i_Provincia</td>
+                <td>@pr.i_Departamento</td>
+                <td>@pr.i_NumHijosVivos</td>
+                <td>@pr.d_FechaInsercion</td>
+                <td>@pr.i_UsuarioInsertaId</td>
+                <td>@pr.d_FechaActualizacion</td>
+                <td>@pr.i_UsuarioActualizaId</td>
+                <td>@pr.i_EsEliminado</td>
+            </tr>
+        }
+    </table>
+    <div class="col-md-1">
+        @using (Html.BeginForm("GuardarDatos", "CargaMasivaExcel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+    @*@Html.Raw(ViewBag.Error)
+                <span>Archivo Excel</span><input type="file" name="excelfile" />
+                <br />
+                <input type="submit" value="Import" />*@
+            <button type="submit" class="btn btn-success" aria-hidden="true">
+                <span class="glyphicon glyphicon-ok"></span> Crear
+            </button>
+        }
+
+    </div>
+</body>
+</html>

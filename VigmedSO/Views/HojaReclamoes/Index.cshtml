@@ -1,0 +1,154 @@
+﻿@model IEnumerable<VigmedSO.Domain.HojaReclamo>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.i_CorrelativoReclamo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.d_fechaR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.i_Parentesco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.i_Producto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.i_Servicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.v_MontoReclamo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.v_Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.i_Reclamo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.i_Queja)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.v_Detalle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.v_Pedido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.b_FirmaConsumidor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.d_FechaComunicacionRespuesta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.b_FirmaProveedor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.i_IsDeleted)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.i_InsertUserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.d_InsertDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.i_UpdateUserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.d_UpdateDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.v_ComentaryRegistros)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.person.v_FirstName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.i_CorrelativoReclamo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.d_fechaR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.i_Parentesco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.i_Producto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.i_Servicio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.v_MontoReclamo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.v_Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.i_Reclamo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.i_Queja)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.v_Detalle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.v_Pedido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.b_FirmaConsumidor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.d_FechaComunicacionRespuesta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.b_FirmaProveedor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.i_IsDeleted)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.i_InsertUserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.d_InsertDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.i_UpdateUserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.d_UpdateDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.v_ComentaryRegistros)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.person.v_FirstName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.v_IdHojaReclamo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.v_IdHojaReclamo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.v_IdHojaReclamo })
+        </td>
+    </tr>
+}
+
+</table>
