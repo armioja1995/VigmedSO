@@ -11,39 +11,52 @@ namespace VigmedSO.Repository
 {
     public class HojaReclamoRepositorio : HojaReclamoInterface
     {
-        SigesoftDesarrollo_2Entities1 entidades;
+        SigesoftDesarrollo_2Entities1 entidad;
 
         public HojaReclamoRepositorio(SigesoftDesarrollo_2Entities1 _entidades)
         {
-            this.entidades = _entidades;    
+            this.entidad = _entidades;
         }
 
         public void AddHojaReclamo(HojaReclamo _hojaReclamo)
         {
-            entidades.HojaReclamo.Add(_hojaReclamo);
-            entidades.SaveChanges();
+            entidad.HojaReclamo.Add(_hojaReclamo);
+            entidad.SaveChanges();
         }
 
         public List<HojaReclamo> AllHojaReclamo()
         {
-            var result = from p in entidades.HojaReclamo select p;
+            var result = from p in entidad.HojaReclamo select p;
             return result.ToList();
+        }
+
+        public List<HojaReclamo> ByQueryAll(string query, DateTime? fecha1, DateTime? fecha2, int? cantVisor)
+        {
+            var dbQuery = (from p in entidad.HojaReclamo.Include("person") select p);
+
+            if (!String.IsNullOrEmpty(query))
+                dbQuery = dbQuery.Where(o => o.person.v_FirstName.Contains(query) || o.person.v_FirstLastName.Contains(query) || o.person.v_SecondLastName.Contains(query) || o.person.v_DocNumber.Contains(query));
+
+            if (fecha1 != null && fecha2 != null)
+                dbQuery = dbQuery.Where(o => o.d_fechaR >= fecha1 && o.d_fechaR <= fecha2);
+
+            return dbQuery.ToList();
         }
 
         public void DeleteAlumno(string _hojaReclamoid)
         {
-            var existe = entidades.HojaReclamo.Find(_hojaReclamoid);
+            var existe = entidad.HojaReclamo.Find(_hojaReclamoid);
             if (existe != null)
             {
-                entidades.HojaReclamo.Remove(existe);
-                entidades.SaveChanges();
+                entidad.HojaReclamo.Remove(existe);
+                entidad.SaveChanges();
             }
         }
 
         public void UpdateAlumno(HojaReclamo _hojaReclamo)
         {
-            entidades.Entry(_hojaReclamo).State = EntityState.Modified;
-            entidades.SaveChanges();
+            entidad.Entry(_hojaReclamo).State = EntityState.Modified;
+            entidad.SaveChanges();
         }
     }
 }

@@ -17,5 +17,7 @@ namespace VigmedSO.Interfaces
 
         List<HojaReclamo> AllHojaReclamo();
 
+        List<HojaReclamo> ByQueryAll(string query, DateTime? fecha1, DateTime? fecha2, int? cantVisor);
+
     }
 }
