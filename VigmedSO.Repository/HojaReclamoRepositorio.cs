@@ -30,7 +30,7 @@ namespace VigmedSO.Repository
             return result.ToList();
         }
 
-        public List<HojaReclamo> ByQueryAll(string query, DateTime? fecha1, DateTime? fecha2, int? cantVisor)
+        public List<HojaReclamo> ByQueryAll(string query, DateTime? fecha1, DateTime? fecha2)
         {
             var dbQuery = (from p in entidad.HojaReclamo.Include("person") select p);
 
@@ -51,6 +51,12 @@ namespace VigmedSO.Repository
                 entidad.HojaReclamo.Remove(existe);
                 entidad.SaveChanges();
             }
+        }
+
+        public HojaReclamo FindHojaReclamo(string id)
+        {
+            var result = from p in entidad.HojaReclamo.Include("person") where p.v_IdPaciente == id select p;
+            return result.FirstOrDefault();
         }
 
         public void UpdateAlumno(HojaReclamo _hojaReclamo)

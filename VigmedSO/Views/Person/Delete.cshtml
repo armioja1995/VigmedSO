@@ -1,0 +1,577 @@
+﻿@model VigmedSO.Domain.person
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>person</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.v_FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.v_FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.v_FirstLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.v_FirstLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.v_SecondLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.v_SecondLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_DocTypeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_DocTypeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.v_DocNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.v_DocNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.d_Birthdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.d_Birthdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.v_BirthPlace)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.v_BirthPlace)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_SexTypeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_SexTypeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_MaritalStatusId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_MaritalStatusId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_LevelOfId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_LevelOfId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.v_TelephoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.v_TelephoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.v_AdressLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.v_AdressLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.v_GeografyLocationId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.v_GeografyLocationId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.v_ContactName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.v_ContactName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.v_EmergencyPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.v_EmergencyPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.b_PersonImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.b_PersonImage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.v_Mail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.v_Mail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_BloodGroupId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_BloodGroupId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_BloodFactorId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_BloodFactorId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.b_FingerPrintTemplate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.b_FingerPrintTemplate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.b_RubricImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.b_RubricImage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.b_FingerPrintImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.b_FingerPrintImage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.t_RubricImageText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.t_RubricImageText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.v_CurrentOccupation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.v_CurrentOccupation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_DepartmentId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_DepartmentId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_ProvinceId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_ProvinceId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_DistrictId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_DistrictId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_ResidenceInWorkplaceId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_ResidenceInWorkplaceId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.v_ResidenceTimeInWorkplace)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.v_ResidenceTimeInWorkplace)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_TypeOfInsuranceId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_TypeOfInsuranceId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_NumberLivingChildren)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_NumberLivingChildren)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_NumberDependentChildren)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_NumberDependentChildren)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_OccupationTypeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_OccupationTypeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.v_OwnerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.v_OwnerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_NumberLiveChildren)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_NumberLiveChildren)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_NumberDeadChildren)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_NumberDeadChildren)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_IsDeleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_IsDeleted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_InsertUserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_InsertUserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.d_InsertDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.d_InsertDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_UpdateUserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_UpdateUserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.d_UpdateDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.d_UpdateDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_InsertNodeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_InsertNodeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_UpdateNodeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_UpdateNodeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_Relationship)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_Relationship)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.v_ExploitedMineral)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.v_ExploitedMineral)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_AltitudeWorkId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_AltitudeWorkId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_PlaceWorkId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_PlaceWorkId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.v_NroPoliza)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.v_NroPoliza)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.v_Deducible)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.v_Deducible)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_NroHermanos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_NroHermanos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.v_Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.v_Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.v_Procedencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.v_Procedencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.v_CentroEducativo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.v_CentroEducativo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.v_Religion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.v_Religion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.v_Nacionalidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.v_Nacionalidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.v_ResidenciaAnterior)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.v_ResidenciaAnterior)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.v_Subs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.v_Subs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.v_ComentaryUpdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.v_ComentaryUpdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.v_PhoneContac)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.v_PhoneContac)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_Marketing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_Marketing)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.v_ProtocolId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.v_ProtocolId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.d_ExpirationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.d_ExpirationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_TotalAtenciones)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_TotalAtenciones)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_CountAtenciones)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_CountAtenciones)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_EtniaRaza)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_EtniaRaza)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.i_Migrante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.i_Migrante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.v_Migrante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.v_Migrante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pacient.v_ComentaryUpdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pacient.v_ComentaryUpdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.professional.v_ProfessionalCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.professional.v_ProfessionalCode)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

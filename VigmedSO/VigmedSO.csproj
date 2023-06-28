@@ -233,6 +233,7 @@
     <Compile Include="Controllers\HojaReclamoesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PersonController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1350,6 +1351,11 @@
     <Content Include="Views\HojaReclamoes\Details.cshtml" />
     <Content Include="Views\HojaReclamoes\Edit.cshtml" />
     <Content Include="Views\HojaReclamoes\Index.cshtml" />
+    <Content Include="Views\Person\Create.cshtml" />
+    <Content Include="Views\Person\Delete.cshtml" />
+    <Content Include="Views\Person\Details.cshtml" />
+    <Content Include="Views\Person\Edit.cshtml" />
+    <Content Include="Views\Person\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

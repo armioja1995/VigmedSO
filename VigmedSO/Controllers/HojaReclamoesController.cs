@@ -7,18 +7,155 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using VigmedSO.Domain;
+using VigmedSO.Interfaces;
 
 namespace VigmedSO.Controllers
 {
+    [AllowAnonymous]
     public class HojaReclamoesController : Controller
     {
-        private SigesoftDesarrollo_2Entities1 db = new SigesoftDesarrollo_2Entities1();
+        //private HojaReclamoInterface _HojaReclamo;
+        //private PersonInterface _Person;
 
+        //public HojaReclamoesController(HojaReclamoInterface HojaReclamo, PersonInterface Person)
+        //{
+        //    this._HojaReclamo = HojaReclamo;
+        //    this._Person = Person;
+        //}
+
+
+        //public ActionResult Index(string query = "", DateTime? fecha1 = null, DateTime? fecha2 = null, int? page = null)
+        //{
+        //    page = (page ?? 1);
+        //    var datos = _HojaReclamo.ByQueryAll(query, fecha1, fecha2);
+        //    return View(datos.ToPagedList((int)page, 15));
+        //}
+
+        //public ActionResult Details(string id)
+        //{
+        //    var data = _HojaReclamo.FindHojaReclamo(id);
+        //    return View("Details", data);
+        //}
+
+        //public ActionResult Create()
+        //{
+        //    ViewBag.IdTrabajador = intrabajador.AllTrabajador();
+
+        //    return View("Create");
+        //}
+
+        //[HttpPost]
+        //public ActionResult Create(JustificacionTra justificacionTra)
+        //{
+        //    validator.Execute(justificacionTra);
+        //    validator.errors.ToList().ForEach(x => ModelState.AddModelError(x.Key, x.Value));
+        //    if (ModelState.IsValid)
+        //    {
+        //        repository.AddJustificacionTra(justificacionTra);
+        //        TempData["UpdateSuccess"] = "Se Guardó Correctamente";
+
+        //        if (justificacionTra.DocumentoFile != null)
+        //        {
+        //            var folderCV = "~/Content/Just-Trabajadores";
+        //            var fileCV = string.Format("{0}.pdf", "Justificación-" + justificacionTra.Motivo);
+        //            var responseCV = FileHelpers.UploadDoc(justificacionTra.DocumentoFile, folderCV, fileCV);
+        //            if (responseCV)
+        //            {
+        //                var picCV = string.Format("{0}/{1}", folderCV, fileCV);
+        //                justificacionTra.Documento = picCV;
+
+        //                repository.UpdateJustificacionTra(justificacionTra);
+        //            }
+        //        }
+        //        return RedirectToAction("Index");
+        //    }
+
+        //    ViewBag.IdTrabajador = intrabajador.AllTrabajador();
+        //    return View("Create", justificacionTra);
+        //}
+
+        //public ActionResult Edit(string id)
+        //{
+        //    ViewBag.trabajador = intrabajador.AllTrabajador();
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    var data = repository.FindJustificacionTra(id);
+        //    if (data == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View("Edit", data);
+        //}
+
+        //[HttpPost]
+        //public ActionResult Edit(JustificacionTra justificacionTra)
+        //{
+        //    validator.Execute(justificacionTra);
+        //    validator.errors.ToList().ForEach(x => ModelState.AddModelError(x.Key, x.Value));
+
+        //    if (ModelState.IsValid)
+        //    {
+        //        if (justificacionTra.DocumentoFile != null)
+        //        {
+        //            var folderCV = "~/Content/Just-Trabajadores";
+        //            var fileCV = string.Format("{0}.pdf", "Justificación-" + justificacionTra.Motivo);
+        //            var responseCV = FileHelpers.UploadDoc(justificacionTra.DocumentoFile, folderCV, fileCV);
+        //            if (responseCV)
+        //            {
+        //                var picCV = string.Format("{0}/{1}", folderCV, fileCV);
+        //                justificacionTra.Documento = picCV;
+
+        //            }
+        //        }
+        //        repository.UpdateJustificacionTra(justificacionTra);
+        //        TempData["UpdateSuccess"] = "Se actualizó correctamente";
+        //        return RedirectToAction("Index");
+        //    }
+        //    ViewBag.IdTrabajador = _Person.AllPerson();
+        //    var data = _HojaReclamo.FindHojaReclamo(justificacionTra.Id);
+        //    return View("Edit", data);
+        //}
+
+        //public ActionResult Delete(string id)
+        //{
+        //    var user = _HojaReclamo.FindHojaReclamo(id);
+        //    _HojaReclamo.DeleteJustificacionTra(id);
+        //    TempData["UpdateSuccess"] = "Se eliminó correctamente";
+        //    return RedirectToAction("Index");
+        //}
+
+        //public ActionResult SelectTrabajador(string dni)
+        //{
+        //    var modelo = new person();
+        //    if (!string.IsNullOrEmpty(dni))
+        //    {
+        //        var query = _Person.FindPersonByDni(dni);
+        //        modelo = query;
+        //    }
+        //    return PartialView("_SelectTrabajador", modelo);
+        //}
+
+
+
+
+
+
+        private SigesoftDesarrollo_2Entities1 db = new SigesoftDesarrollo_2Entities1();
         // GET: HojaReclamoes
-        public ActionResult Index()
+        public ActionResult Index(string query = "", DateTime? fecha1 = null, DateTime? fecha2 = null, int? page = null)
         {
-            var hojaReclamo = db.HojaReclamo.Include(h => h.person);
-            return View(hojaReclamo.ToList());
+
+            //page = (page ?? 1);
+
+            //var datos = _HojaReclamo.ByQueryAll(query, fecha1, fecha2);
+
+            //return RedirectToAction("Index");
+
+            var hojareclamo = db.HojaReclamo.Include(p => p.person);
+            return View(hojareclamo.ToList());
+            //return View(datos.ToPagedList((int)page, 15));
         }
 
         // GET: HojaReclamoes/Details/5

@@ -47,6 +47,7 @@ namespace VigmedSO.App_Start
 
             //container.RegisterType<PersonaInterface, PersonaRepositorio>();
             container.RegisterType<HojaReclamoInterface, HojaReclamoRepositorio>();
+            container.RegisterType<PersonInterface, PersonRepositorio>();
         }
     }
 }

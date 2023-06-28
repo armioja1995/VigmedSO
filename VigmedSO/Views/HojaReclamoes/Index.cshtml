@@ -94,15 +94,15 @@
 
 <div id="Imprime">
     <table class="table table-striped table-responsive  table-hover" style="border-style: initial; border-color: lightslategray; color:black">
-        <thead style="background-color: rgb(0, 255, 138);">
+        <thead style="background-color: rgb(212, 30, 53); ">
             <tr>
-                <th>Cliente</th>
-                <th>Fecha Reclamo</th>
-                <th>Prod / Serv</th>
-                <th>Monto</th>
-                <th>Desc</th>
-                <th>Quej/Rec</th>
-                <th>Acciones</th>
+                <th style="color:white">Cliente</th>
+                <th style="color:white">Fecha Reclamo</th>
+                <th style="color:white">Prod / Serv</th>
+                <th style="color:white">Monto</th>
+                <th style="color:white">Desc</th>
+                <th style="color:white">Quej/Rec</th>
+                <th style="color:white">Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -124,13 +124,13 @@
                             }
                         </td>*@
                     <td>
-                        <a href="/JustificacionTra/Details/@item.v_IdHojaReclamo" id="btnDatails" data-toggle="modal" data-target="#myModal" data-dismiss="modal" class="btn btn-info btn-xs">
+                        <a href="/HojaReclamoes/Details/@item.v_IdHojaReclamo" id="btnDatails" data-toggle="modal" data-target="#myModal" data-dismiss="modal" class="btn btn-info btn-xs">
                             <span class="glyphicon glyphicon-eye-open"></span>
                         </a>
-                        <a href="/JustificacionTra/Edit/@item.v_IdHojaReclamo" class="btn btn-warning btn-xs">
+                        <a href="/HojaReclamoes/Edit/@item.v_IdHojaReclamo" class="btn btn-warning btn-xs">
                             <span class="glyphicon glyphicon-pencil"></span>
                         </a>
-                        <a href="/JustificacionTra/Delete/@item.v_IdHojaReclamo" class="btn btn-danger btn-xs">
+                        <a href="/HojaReclamoes/Delete/@item.v_IdHojaReclamo" class="btn btn-danger btn-xs">
                             <span class="glyphicon glyphicon-trash"></span>
                         </a>
                     </td>
