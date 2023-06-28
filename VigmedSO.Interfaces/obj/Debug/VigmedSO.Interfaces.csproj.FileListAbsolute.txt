@@ -19,3 +19,15 @@ D:\WORK\DESARROLLO\ResultadosCsl_ESO\VigmedSO.Interfaces\obj\Debug\VigmedSO.Inte
 D:\WORK\DESARROLLO\ResultadosCsl_ESO\VigmedSO.Interfaces\obj\Debug\VigmedSO.Interfaces.csproj.CopyComplete
 D:\WORK\DESARROLLO\ResultadosCsl_ESO\VigmedSO.Interfaces\obj\Debug\VigmedSO.Interfaces.dll
 D:\WORK\DESARROLLO\ResultadosCsl_ESO\VigmedSO.Interfaces\obj\Debug\VigmedSO.Interfaces.pdb
+D:\WORK\DESARROLLO\VigmedSO\VigmedSO.Interfaces\bin\Debug\VigmedSO.Interfaces.dll
+D:\WORK\DESARROLLO\VigmedSO\VigmedSO.Interfaces\bin\Debug\VigmedSO.Interfaces.pdb
+D:\WORK\DESARROLLO\VigmedSO\VigmedSO.Interfaces\bin\Debug\VigmedSO.Domain.dll
+D:\WORK\DESARROLLO\VigmedSO\VigmedSO.Interfaces\bin\Debug\EntityFramework.dll
+D:\WORK\DESARROLLO\VigmedSO\VigmedSO.Interfaces\bin\Debug\VigmedSO.Domain.pdb
+D:\WORK\DESARROLLO\VigmedSO\VigmedSO.Interfaces\bin\Debug\VigmedSO.Domain.dll.config
+D:\WORK\DESARROLLO\VigmedSO\VigmedSO.Interfaces\bin\Debug\EntityFramework.xml
+D:\WORK\DESARROLLO\VigmedSO\VigmedSO.Interfaces\obj\Debug\VigmedSO.Interfaces.csproj.AssemblyReference.cache
+D:\WORK\DESARROLLO\VigmedSO\VigmedSO.Interfaces\obj\Debug\VigmedSO.Interfaces.csproj.CoreCompileInputs.cache
+D:\WORK\DESARROLLO\VigmedSO\VigmedSO.Interfaces\obj\Debug\VigmedSO.Interfaces.csproj.CopyComplete
+D:\WORK\DESARROLLO\VigmedSO\VigmedSO.Interfaces\obj\Debug\VigmedSO.Interfaces.dll
+D:\WORK\DESARROLLO\VigmedSO\VigmedSO.Interfaces\obj\Debug\VigmedSO.Interfaces.pdb

@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="HojaReclamoInterface.cs" />
     <Compile Include="PersonaInterface.cs" />
+    <Compile Include="PersonInterface.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
