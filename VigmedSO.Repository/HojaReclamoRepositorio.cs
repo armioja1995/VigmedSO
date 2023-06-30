@@ -55,8 +55,12 @@ namespace VigmedSO.Repository
 
         public HojaReclamo FindHojaReclamo(string id)
         {
-            var result = from p in entidad.HojaReclamo.Include("person") where p.v_IdPaciente == id select p;
-            return result.FirstOrDefault();
+            //var result = from p in entidad.HojaReclamo.Include("person") where p.v_IdPaciente == id select p;
+            //var result = from p in entidad.HojaReclamo where p.v_IdPaciente == id select p;
+
+            var result = entidad.HojaReclamo.Find(id);
+
+            return result;
         }
 
         public void UpdateAlumno(HojaReclamo _hojaReclamo)

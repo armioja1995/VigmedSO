@@ -1,6 +1,6 @@
-﻿@{
+﻿@*@{
     Layout = null;
-}
+}*@
 
 <!DOCTYPE html>
 
@@ -13,7 +13,10 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="nav-md">
+    @RenderSection("featured", required: false)
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    @RenderSection("scripts", required: false)
     <!-- Site wrapper -->
     <div class="wrapper">
 
@@ -104,13 +107,13 @@
                                 <i class="fa fa-user"></i>
                                 <span>Persona</span>
                             </a>*@
-                    <ul class="treeview-menu">
-                        <li><a href="/HojaReclamoes/Index"><i class="fa fa-circle-o"></i> Historial</a></li>
-                        <li><a href="/HojaReclamoes/Create"><i class="fa fa-circle-o"></i> Registro</a></li>
-                        @*<li><a href="/Antecedente/Index"><i class="fa fa-circle-o"></i> Antecedentes</a></li>
-        <li><a href="/Habitos/Index"><i class="fa fa-circle-o"></i> Hábitos</a></li>
-        <li><a href="/AlergiasInmunizaciones/Index"><i class="fa fa-circle-o"></i> Alergias</a></li>*@
-                    </ul>
+                        <ul class="treeview-menu">
+                            <li><a href="/HojaReclamoes/Index"><i class="fa fa-circle-o"></i> Historial</a></li>
+                            <li><a href="/HojaReclamoes/Create"><i class="fa fa-circle-o"></i> Registro</a></li>
+                            @*<li><a href="/Antecedente/Index"><i class="fa fa-circle-o"></i> Antecedentes</a></li>
+                                <li><a href="/Habitos/Index"><i class="fa fa-circle-o"></i> Hábitos</a></li>
+                                <li><a href="/AlergiasInmunizaciones/Index"><i class="fa fa-circle-o"></i> Alergias</a></li>*@
+                        </ul>
                     </li>
                     <li class="treeview">
                         <a href="#">

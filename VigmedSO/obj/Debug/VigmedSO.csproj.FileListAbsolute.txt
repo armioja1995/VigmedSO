@@ -357,3 +357,7 @@ D:\WORK\DESARROLLO\VigmedSO\VigmedSO\obj\Debug\VigmedSO.csproj.CoreCompileInputs
 D:\WORK\DESARROLLO\VigmedSO\VigmedSO\obj\Debug\VigmedSO.csproj.CopyComplete
 D:\WORK\DESARROLLO\VigmedSO\VigmedSO\obj\Debug\VigmedSO.dll
 D:\WORK\DESARROLLO\VigmedSO\VigmedSO\obj\Debug\VigmedSO.pdb
+D:\WORK\DESARROLLO\VigmedSO\VigmedSO\bin\PagedList.dll
+D:\WORK\DESARROLLO\VigmedSO\VigmedSO\bin\PagedList.Mvc.dll
+D:\WORK\DESARROLLO\VigmedSO\VigmedSO\bin\PagedList.xml
+D:\WORK\DESARROLLO\VigmedSO\VigmedSO\bin\PagedList.Mvc.xml
